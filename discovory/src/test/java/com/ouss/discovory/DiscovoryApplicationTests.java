@@ -1,10 +1,10 @@
-package com.discovrysevice.discovryservice;
+package com.ouss.discovory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DiscovryServiceApplicationTests {
+class DiscovoryApplicationTests {
 
     @Test
     void contextLoads() {
