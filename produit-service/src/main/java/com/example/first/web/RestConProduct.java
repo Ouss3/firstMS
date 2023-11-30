@@ -1,5 +1,6 @@
 package com.example.first.web;
 
+import com.example.first.config.GlobalConfig;
 import com.example.first.entites.Product;
 import com.example.first.reposotry.ProductRepositry;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,13 @@ public class RestConProduct {
 
     @Autowired
     ProductRepositry productRepositry;
+    @Autowired
+    GlobalConfig globalConfig;
+
+    @GetMapping("/config")
+    public GlobalConfig globalConfig(){
+        return globalConfig;
+    }
     @GetMapping("/products")
     public List<Product> getAll(){
         return productRepositry.findAll();

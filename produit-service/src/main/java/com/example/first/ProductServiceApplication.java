@@ -1,19 +1,20 @@
 package com.example.first;
 
+import com.example.first.config.GlobalConfig;
 import com.example.first.entites.Product;
 import com.example.first.reposotry.ProductRepositry;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
-import java.util.stream.Stream;
-
 @SpringBootApplication
-public class FirstApplication {
+@EnableConfigurationProperties({GlobalConfig.class})
+public class ProductServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FirstApplication.class, args);
+        SpringApplication.run(ProductServiceApplication.class, args);
     }
 
     @Bean
